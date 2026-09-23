@@ -11,12 +11,15 @@
   --ink: #141414;
   --grey: #828282;
 
-  --blue: #1e4bd7;
-  --red: #d71e1e;
-  --purple: #581e70;
-  --yellow: #ffe927;
-  --black: #000000;
-  --green: #0c7866;
+  /* manilla mappen: zes tinten beige en kraft */
+  --manila-1: #ead5a8;
+  --manila-2: #d8ba85;
+  --manila-3: #f2e2c0;
+  --manila-4: #cbaa74;
+  --manila-5: #e1c693;
+  --manila-6: #bf9d66;
+  --folder-edge: rgba(92, 64, 24, .28);
+  --folder-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .36 0 0 0 0 .25 0 0 0 0 .1 0 0 0 .16 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
 
   --font-display: "Sofia Sans Extra Condensed", "Arial Narrow", Impact, sans-serif;
   --font-serif: "Newsreader", Georgia, "Times New Roman", serif;
@@ -38,10 +41,10 @@
 
   /* tabs */
   --tab-h: 2.75rem;
-  --shoulder: calc(var(--tab-h) * 1.409);
-  --tab-fs: 1.625rem;
-  --tab-ml: 0px;
-  --tab-mr: 0px;
+  --shoulder: calc(var(--tab-h) * 1.1);
+  --tab-fs: 1.375rem;
+  --tab-ml: -.25rem;   /* tabs overlappen een beetje, zoals echte maptabs */
+  --tab-mr: -1rem;
   --shoulder-img: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 62 44' preserveAspectRatio='none'%3E%3Cpath d='M0 0H2C8 0 13.75 4 17.5 9L33.6 30.5C38.1 36.5 44 44 62 44H0Z'/%3E%3C/svg%3E");
 }
 
@@ -49,13 +52,13 @@
   :root { --tab-fs: 1.25rem; --gutter: 1.5rem; }
 }
 @media (max-width: 768px) {
-  :root { --tab-h: 2.25rem; --tab-ml: -.2rem; --tab-mr: -.75rem; --gutter: 1.25rem; }
+  :root { --tab-h: 2.25rem; --tab-ml: -.2rem; --tab-mr: -.8rem; --gutter: 1.25rem; }
 }
 @media (max-width: 480px) {
-  :root { --tab-fs: 15px; --shoulder: 3rem; --tab-ml: -.5rem; --tab-mr: -1rem; --gutter: 1rem; }
+  :root { --tab-fs: 14px; --shoulder: 1.6rem; --tab-ml: -.1rem; --tab-mr: -.45rem; --gutter: 1rem; }
 }
 @media (max-width: 374px) {
-  :root { --tab-fs: 14px; --shoulder: 2.75rem; }
+  :root { --tab-fs: 13px; --shoulder: 1.45rem; }
 }
 
 /* ---------- base ---------- */
@@ -117,12 +120,41 @@ a { color: inherit; }
   letter-spacing: .01em;
 }
 
-.site-header__link {
-  font: 400 .9375rem/1 var(--font-mono);
+/* downloadknop voor het echte stageverslag (pdf) */
+.site-header__download {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  height: 2.25rem;
+  padding: 0 .95rem 0 .8rem;
+  border: 1px solid rgba(255, 255, 255, .35);
+  border-radius: 999px;
+  font: 400 .8125rem/1 var(--font-mono);
   text-decoration: none;
-  opacity: .9;
+  white-space: nowrap;
+  transition: background-color .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
 }
-.site-header__link:hover { opacity: 1; text-decoration: underline; text-underline-offset: .25em; }
+.site-header__download:hover {
+  border-color: var(--manila-1);
+  background: var(--manila-1);
+  color: var(--ink);
+}
+.site-header__download svg {
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.site-header__download-short { display: none; }
+
+@media (max-width: 480px) {
+  .site-header__download { gap: .35rem; padding: 0 .7rem 0 .6rem; }
+  .site-header__download-long { display: none; }
+  .site-header__download-short { display: inline; }
+}
 
 /* ---------- hero ---------- */
 .hero {
@@ -181,10 +213,10 @@ a { color: inherit; }
   top: calc(var(--i) * var(--offset));
   z-index: calc(var(--i) + 1);
   height: calc((var(--n) - 1 - var(--i)) * var(--offset) + var(--front-h));
-  background: var(--c);
-  color: var(--paper);
+  background: var(--folder-grain), var(--c);
+  color: var(--t, var(--ink));
   border-radius: var(--radius) var(--radius) 0 0;
-  box-shadow: 0 -1px 8px rgba(0, 0, 0, .15);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .35), 0 -1px 0 var(--folder-edge), 0 -6px 16px -6px rgba(0, 0, 0, .35);
   transform-origin: 50% 100%;
   transform: translateY(var(--shift, 0px));
   transition: transform var(--dur) var(--ease);
@@ -196,7 +228,7 @@ a { color: inherit; }
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: rgba(255, 255, 255, .05);
+  background: rgba(255, 255, 255, .1);
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--dur) var(--ease);
@@ -215,6 +247,7 @@ a { color: inherit; }
   display: flex;
   align-items: flex-end;
   pointer-events: none;
+  filter: drop-shadow(0 -1px 0 var(--folder-edge));
 }
 
 .tab {
@@ -223,9 +256,9 @@ a { color: inherit; }
   align-items: center;
   height: var(--tab-h);
   margin: 0 calc(var(--shoulder) + var(--tab-mr)) -1px calc(var(--shoulder) + var(--tab-ml));
-  background: var(--c);
-  color: var(--t, var(--paper));
-  font: 300 var(--tab-fs)/1 var(--font-serif);
+  background: var(--folder-grain), var(--c);
+  color: var(--t, var(--ink));
+  font: 400 var(--tab-fs)/1 var(--font-serif);
   white-space: nowrap;
   text-decoration: none;
   pointer-events: auto;
@@ -239,12 +272,18 @@ a { color: inherit; }
   top: 0;
   bottom: 0;
   width: calc(var(--shoulder) + 1px);
-  background: var(--c);
+  background: var(--folder-grain), var(--c);
   -webkit-mask: var(--shoulder-img) 0 0 / 100% 100% no-repeat;
   mask: var(--shoulder-img) 0 0 / 100% 100% no-repeat;
 }
 .tab::before { right: calc(100% - 1px); transform: scaleX(-1); }
 .tab::after { left: calc(100% - 1px); }
+
+.band__tabs .tab:nth-child(1), .vtabs .vtab:nth-child(1) { z-index: 5; }
+.band__tabs .tab:nth-child(2), .vtabs .vtab:nth-child(2) { z-index: 4; }
+.band__tabs .tab:nth-child(3), .vtabs .vtab:nth-child(3) { z-index: 3; }
+.band__tabs .tab:nth-child(4), .vtabs .vtab:nth-child(4) { z-index: 2; }
+.band__tabs .tab:nth-child(5), .vtabs .vtab:nth-child(5) { z-index: 1; }
 
 .tab__label {
   position: relative;
@@ -259,8 +298,8 @@ a { color: inherit; }
   border-radius: 2px;
 }
 
-/* korte labels op smalle schermen */
-@media (max-width: 480px) {
+/* korte labels op smallere schermen */
+@media (max-width: 1250px) {
   .tab__label[data-short] { font-size: 0; }
   .tab__label[data-short]::before {
     content: attr(data-short) / "";
@@ -332,26 +371,10 @@ a { color: inherit; }
   inset: auto calc(var(--radius) + var(--shoulder)) 2rem;
   display: flex;
   flex-direction: column;
-  gap: 3.75rem;
   font: 400 .75rem/1.2 var(--font-mono);
   text-transform: uppercase;
 }
 
-.roses {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: .75rem;
-}
-.roses svg {
-  width: 3.5rem;
-  height: 3.5rem;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
 
 .band__footer-row {
   position: relative;
@@ -401,11 +424,10 @@ a { color: inherit; }
 .scale__nums span:nth-child(5) { left: 100%; transform: translateX(-100%); }
 
 @media (max-width: 768px) {
-  .band__footer { inset-inline: 1rem; gap: 2.5rem; }
+  .band__footer { inset-inline: 1rem; }
   .band__year { display: none; }
 }
 @media (max-width: 480px) {
-  .roses svg { width: 2.75rem; height: 2.75rem; }
   .band__credit { gap: .75rem; }
 }
 
@@ -434,7 +456,7 @@ a { color: inherit; }
    ========================================================= */
 
 :root {
-  --sheet: #f7f3ec;
+  --sheet: #fcfaf5;
   --sheet-ink: #1c1b19;
   --cv-aside: 17rem;          /* ruimte rechts voor de volgende-widget */
   --vtab-fs: 1.375rem;
@@ -476,7 +498,7 @@ a { color: inherit; }
 .site-header__logo { transition: opacity .35s var(--ease); }
 
 @media (max-width: 768px) {
-  .site-header__title { max-width: calc(100% - 6rem); }
+  .site-header__title { max-width: calc(100% - 8.5rem); }
   .site-header.is-titled .site-header__logo { opacity: 0; pointer-events: none; }
 }
 
@@ -521,9 +543,10 @@ a { color: inherit; }
 .folder {
   position: relative;
   padding: 2.25rem 2.25rem 6rem 4.25rem;
-  background: var(--c);
+  background: var(--folder-grain), var(--c);
+  color: var(--t, var(--ink));
   border-radius: 0 var(--radius) 0 0;
-  box-shadow: 1px 0 8px rgba(0, 0, 0, .15), inset 0 1px 0 rgba(255, 255, 255, .06);
+  box-shadow: 1px 0 10px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .35), 0 -1px 0 var(--folder-edge);
 }
 
 .sheet {
@@ -535,7 +558,7 @@ a { color: inherit; }
   background: var(--grain), var(--sheet);
   color: var(--sheet-ink);
   border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .18);
+  box-shadow: 0 2px 6px rgba(70, 45, 10, .25);
 }
 
 /* perforatie: je kijkt door de gaatjes heen naar de map */
@@ -720,6 +743,7 @@ mark.fill {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  filter: drop-shadow(1px 0 0 var(--folder-edge));
 }
 
 .vtab {
@@ -731,8 +755,8 @@ mark.fill {
   margin: calc(var(--shoulder) + var(--tab-ml)) 0 calc(var(--shoulder) + var(--tab-mr)) -1px;
   padding-block: .15rem;
   writing-mode: vertical-rl;
-  background: var(--c);
-  color: var(--t, var(--paper));
+  background: var(--folder-grain), var(--c);
+  color: var(--t, var(--ink));
   font: 300 var(--vtab-fs)/1 var(--font-serif);
   white-space: nowrap;
   text-decoration: none;
@@ -744,13 +768,13 @@ mark.fill {
   left: 0;
   right: 0;
   height: calc(var(--shoulder) + 1px);
-  background: var(--c);
+  background: var(--folder-grain), var(--c);
   -webkit-mask: var(--vshoulder-img) 0 0 / 100% 100% no-repeat;
   mask: var(--vshoulder-img) 0 0 / 100% 100% no-repeat;
 }
 .vtab::before { bottom: calc(100% - 1px); transform: scaleY(-1); }
 .vtab::after { top: calc(100% - 1px); }
-.vtab[aria-current] { z-index: 1; }
+.vtabs .vtab[aria-current] { z-index: 6; }
 .vtab:focus-visible { outline: 2px solid currentColor; outline-offset: -6px; }
 
 /* ---------- volgende map (doorscrollen) ---------- */
@@ -818,8 +842,8 @@ mark.fill {
   height: 11.25rem;
   padding: 1.25rem;
   border-radius: 12px;
-  background: var(--c);
-  color: var(--t, var(--paper));
+  background: var(--folder-grain), var(--c);
+  color: var(--t, var(--ink));
   text-decoration: none;
 }
 .next-widget__name { font: 400 1.375rem/1.15 var(--font-serif); }
@@ -896,7 +920,7 @@ mark.fill {
 }
 .pull__folder {
   position: absolute;
-  background: var(--c);
+  background: var(--folder-grain), var(--c);
   border-radius: var(--radius) var(--radius) 0 0;
   box-shadow: 0 -6px 30px rgba(0, 0, 0, .35);
   transform-origin: 50% 0%;
@@ -922,3 +946,43 @@ mark.fill {
 @keyframes vtabs-in { from { transform: translateX(-100%); } }
 @keyframes fade     { from { opacity: 0; } }
 @keyframes band-return { from { transform: translateY(60vh); } }
+
+/* ---------- ronde stempel 'Confidential' op de band Afronding ---------- */
+/* SVG-tekst telt in Chrome mee als breedte; knip horizontaal af, tabs bovenaan blijven zichtbaar */
+.band--front { overflow-x: clip; }
+
+.stamp-confidential {
+  position: absolute;
+  top: 4.75rem;
+  right: 9%;
+  z-index: 2;
+  width: clamp(9rem, 15vw, 13.5rem);
+  height: auto;
+  overflow: hidden;
+  color: #b8231c;
+  opacity: .85;
+  transform: rotate(-14deg);
+  pointer-events: none;
+  /* ongelijke inkt, zoals een echte stempel */
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6 0 0 0 4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)'/%3E%3C/svg%3E") 0 0 / 220px 220px;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6 0 0 0 4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)'/%3E%3C/svg%3E") 0 0 / 220px 220px;
+}
+.conf-ring { fill: none; stroke: currentColor; stroke-width: 1.6; }
+.conf-ring--thick { stroke-width: 4.5; }
+.conf-arc { fill: currentColor; font: 800 17px/1 var(--font-display); letter-spacing: 2.2px; }
+.conf-small { fill: currentColor; font: 800 12px/1 var(--font-display); letter-spacing: 1.5px; }
+/* de balk dekt de ringen af in de kleur van de map */
+.conf-banner { fill: var(--c); stroke: currentColor; stroke-width: 3; }
+.conf-banner-line { fill: none; stroke: currentColor; stroke-width: 1.2; }
+.conf-word { fill: currentColor; font: 800 27px/1 var(--font-display); letter-spacing: 1px; }
+
+.js .stamp-confidential { animation: stamp-down .45s cubic-bezier(.2, 1.4, .4, 1) 1.35s backwards; }
+.view--home.is-returning .stamp-confidential { animation: stamp-down .45s cubic-bezier(.2, 1.4, .4, 1) .9s backwards; }
+
+@keyframes stamp-down {
+  from { opacity: 0; transform: rotate(-14deg) scale(1.8); }
+}
+
+@media (max-width: 768px) {
+  .stamp-confidential { top: 11rem; right: 1.5rem; width: 8.5rem; }
+}

@@ -124,7 +124,7 @@
         tab: tab.querySelector('.tab__label').textContent.trim(),
         title: article.querySelector('h2').textContent.trim(),
         color: style.getPropertyValue('--c').trim(),
-        text: style.getPropertyValue('--t').trim() || '#fdfaf7',
+        text: style.getPropertyValue('--t').trim() || '#141414',
         article: article,
         tabEl: tab
       };
