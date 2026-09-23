@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Stagedossier · Mitchell Scholte</title>
+  <meta name="description" content="Stageverslag van Mitchell Scholte, student Communication &amp; Multimedia Design aan de Hogeschool van Amsterdam, over de stage bij Build in Amsterdam.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,600&family=Sofia+Sans+Extra+Condensed:wght@800&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Direct naar de inhoud</a>
+
+  <header class="site-header">
+    <span class="site-header__title" aria-hidden="true"></span>
+    <a class="site-header__logo" href="#/" aria-label="Terug naar het overzicht">Stagedossier</a>
+    <a class="site-header__link" href="#over">Over</a>
+  </header>
+
+  <main id="main">
+    <div class="view view--home">
+    <section class="hero">
+      <h1 class="hero__title">Stageverslag</h1>
+      <p class="hero__desc">Het verslag van mijn stage bij Build in Amsterdam, geordend in negen mappen: over merken en webwinkels, over samenwerken in een bureau en over wat ik onderweg leerde.</p>
+    </section>
+
+    <nav class="stack" id="dossier" aria-label="Mappen van het dossier" style="--n: 4">
+
+      <!-- Band 1 · Introductie -->
+      <section class="band" style="--i: 0; --c: var(--blue)">
+        <div class="band__tabs">
+          <a class="tab" href="#/voorwoord" style="--c: var(--blue)"><span class="tab__label">Voorwoord</span></a>
+          <a class="tab" href="#/inleiding" style="--c: var(--red)"><span class="tab__label">Inleiding</span></a>
+        </div>
+        <button class="band__toggle" type="button" aria-expanded="false" aria-controls="band-desc-1">
+          <span>Introductie</span><span class="band__chevron" aria-hidden="true"></span>
+        </button>
+        <p class="band__desc" id="band-desc-1">Waar het dossier opengaat: een woord van dank, het doel van dit verslag en een leeswijzer die uitlegt hoe je door de mappen bladert.</p>
+      </section>
+
+      <!-- Band 2 · Context -->
+      <section class="band" style="--i: 1; --c: var(--green)">
+        <div class="band__tabs">
+          <a class="tab" href="#/build-in-amsterdam" style="--c: var(--green)"><span class="tab__label" data-short="Het bureau">Build in Amsterdam</span></a>
+          <a class="tab" href="#/leerdoelen" style="--c: var(--yellow); --t: var(--ink)"><span class="tab__label">Leerdoelen</span></a>
+        </div>
+        <button class="band__toggle" type="button" aria-expanded="false" aria-controls="band-desc-2">
+          <span>Context</span><span class="band__chevron" aria-hidden="true"></span>
+        </button>
+        <p class="band__desc" id="band-desc-2">De plek en het plan: wat Build in Amsterdam doet en hoe er gewerkt wordt, en de leerdoelen waarmee ik aan mijn stage begon.</p>
+      </section>
+
+      <!-- Band 3 · Praktijk -->
+      <section class="band" style="--i: 2; --c: var(--purple)">
+        <div class="band__tabs">
+          <a class="tab" href="#/werkzaamheden" style="--c: var(--purple)"><span class="tab__label" data-short="Werk">Werkzaamheden</span></a>
+          <a class="tab" href="#/projecten" style="--c: var(--blue)"><span class="tab__label">Projecten</span></a>
+          <a class="tab" href="#/reflectie" style="--c: var(--black)"><span class="tab__label">Reflectie</span></a>
+        </div>
+        <button class="band__toggle" type="button" aria-expanded="false" aria-controls="band-desc-3">
+          <span>Praktijk</span><span class="band__chevron" aria-hidden="true"></span>
+        </button>
+        <p class="band__desc" id="band-desc-3">Het werk zelf: hoe een gewone werkweek eruitzag, aan welke projecten ik bijdroeg en wat ik per leerdoel heb geleerd.</p>
+      </section>
+
+      <!-- Band 4 · Afronding (voorste band, standaard uitgeklapt) -->
+      <section class="band band--front" style="--i: 3; --c: var(--red)">
+        <div class="band__tabs">
+          <a class="tab" href="#/conclusie" style="--c: var(--red)"><span class="tab__label" data-short="Conclusie">Conclusie &amp; advies</span></a>
+          <a class="tab" href="#/bijlagen" style="--c: var(--yellow); --t: var(--ink)"><span class="tab__label" data-short="Bijlagen">Bijlagen &amp; bronnen</span></a>
+        </div>
+        <button class="band__toggle" type="button" aria-expanded="true" aria-controls="band-desc-4">
+          <span>Afronding</span><span class="band__chevron" aria-hidden="true"></span>
+        </button>
+        <p class="band__desc" id="band-desc-4">Waar het dossier sluit: wat de stage heeft opgeleverd, wat ik het bureau en de opleiding aanraad, en alle bijlagen en bronnen op een rij.</p>
+
+        <footer class="band__footer">
+          <div class="roses" aria-hidden="true">
+            <svg viewBox="0 0 56 56"><circle cx="24" cy="32" r="16"/><path d="M13 21 35 43M16 18l22 22M19 16.5l19.5 19.5M22 16l18 18M26 16.2 39.8 30"/><path d="M40 6l6 8V6l6 8"/></svg>
+            <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="16"/><path d="M18 38 38 18M30 18h8v8"/><path d="M22 25l-4-4M25 22l-4-4" /></svg>
+            <svg viewBox="0 0 56 56"><path d="M8 48 38 18M28 18h10v10"/><path d="M40 4l6 8V4l6 8"/></svg>
+            <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="16"/><path d="M17 17l22 22M39 17 17 39M28 12v32M12 28h32"/></svg>
+            <svg viewBox="0 0 56 56"><circle cx="26" cy="30" r="15"/><path d="M20 36l12-12" stroke-width="4"/><path d="M40 8l6 8V8l6 8"/></svg>
+            <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="14"/><path d="M8 48 48 8M36 14l4 4M16 36l4 4"/><circle cx="28" cy="28" r="4"/></svg>
+            <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="16"/><path d="M28 12l5 16-5 16-5-16z"/><path d="M12 28l16-5 16 5-16 5z"/></svg>
+          </div>
+          <div class="band__footer-row">
+            <div class="scale" aria-hidden="true">
+              <span class="scale__bar"><i></i><i></i><i></i><i></i></span>
+              <span class="scale__nums"><span>0</span><span>4</span><span>8</span><span>16</span><span>32</span></span>
+            </div>
+            <p class="band__year">© 2026</p>
+            <p class="band__credit">Gemaakt door Mitchell Scholte <span class="monogram" aria-hidden="true">MS</span></p>
+          </div>
+        </footer>
+      </section>
+
+    </nav>
+    </div>
+
+    <div class="view view--chapter" hidden></div>
+
+    <!--
+      Hoofdstukken. Elk <article> is één map; het id moet gelijk zijn aan de tab-link (#/id).
+      - .meta     : gegevens linksboven op het vel
+      - .photo    : de eerste foto komt naast de tekst, de rest in de collage
+      - .text     : de lopende tekst (eerste alinea krijgt een initiaal)
+      - .notes    : notitiekaarten in de collage
+      - <mark class="fill"> : nog in te vullen
+    -->
+    <div class="chapters" hidden>
+
+      <article class="chapter" id="voorwoord">
+        <h2>Voorwoord</h2>
+        <dl class="meta">
+          <div><dt>Map</dt><dd>01 / 09</dd></div>
+          <div><dt>Onderdeel</dt><dd>Introductie</dd></div>
+          <div><dt>Leestijd</dt><dd>3 min</dd></div>
+          <div><dt>Geschreven</dt><dd><mark class="fill">maand en jaar van inleveren</mark></dd></div>
+        </dl>
+        <figure class="photo"><figcaption><mark class="fill">Foto: de eerste werkdag op kantoor, met datum</mark></figcaption></figure>
+        <div class="text">
+          <p>Wat je hier openslaat, is het verslag van mijn stage bij Build in Amsterdam, waar ik <mark class="fill">stageperiode, bijv. van februari tot en met juni 2026</mark> meewerkte als <mark class="fill">functie tijdens de stage</mark>. Ik schreef het als afsluiting van de stage binnen de opleiding Communication &amp; Multimedia Design aan de Hogeschool van Amsterdam. Het is geen gewoon document geworden, maar een dossier: negen mappen die je in je eigen volgorde kunt openen.</p>
+          <h3>Waarom Build in Amsterdam</h3>
+          <p>Ik koos voor Build in Amsterdam omdat <mark class="fill">persoonlijke reden voor de keuze, bijv. werk van het bureau dat je aansprak of een gesprek dat de doorslag gaf</mark>. Op de opleiding leer ik digitale producten te bedenken vanuit de mensen die ze gebruiken. Bij een bureau dat merken en webwinkels ontwerpt en bouwt, komt daar iets bij: elk ontwerp moet ook passen bij een merk, werken op elk scherm en uiteindelijk verkopen. Die combinatie wilde ik van dichtbij meemaken.</p>
+          <h3>Wat je kunt verwachten</h3>
+          <p>Dit verslag is eerlijk over wat goed ging en over wat schuurde. Ik beschrijf het bureau, de leerdoelen waarmee ik begon, het werk dat ik deed en wat ik daarvan heb geleerd. Waar ik over klantwerk schrijf, houd ik me aan de afspraken over vertrouwelijkheid: <mark class="fill">afspraak over wat wel en niet gedeeld mag worden, bijv. geen klantnamen en geen ontwerpen die nog niet live staan</mark>.</p>
+          <h3>Dankwoord</h3>
+          <p>Een stage doe je niet alleen. Mijn dank gaat in de eerste plaats uit naar <mark class="fill">naam van de stagebegeleider bij Build in Amsterdam</mark>, voor <mark class="fill">waarvoor je je begeleider dankbaar bent, bijv. het vertrouwen vanaf de eerste week</mark>. Daarnaast bedank ik <mark class="fill">namen van collega's of het team</mark> voor hun geduld, hun kritische blik en de koffie.</p>
+          <p>Vanuit de hogeschool bedank ik <mark class="fill">naam van de stagedocent van de HvA</mark> voor de begeleiding en voor de gesprekken die me hielpen om afstand te nemen van het dagelijkse werk. Tot slot bedank ik <mark class="fill">familie, vrienden of medestudenten</mark>, die de afgelopen maanden meer over webwinkels hebben gehoord dan ze ooit wilden weten.</p>
+          <p>Veel leesplezier.</p>
+          <p class="signature">Mitchell Scholte<span>Amsterdam, <mark class="fill">datum</mark></span></p>
+        </div>
+        <div class="notes">
+          <div class="note"><h3>Waarom mappen?</h3><p>Een stage verloopt niet in nette hoofdstukken, maar in dossiers die tegelijk openliggen. Daarom blader je door dit verslag zoals door een archiefkast.</p></div>
+          <div class="note"><h3>Vertrouwelijk</h3><p>Sommig klantwerk mag ik niet laten zien. Waar dat zo is, beschrijf ik de aanpak en laat ik de naam weg.</p></div>
+          <div class="note"><h3>Met dank aan</h3><p><mark class="fill">namen</mark>, en iedereen die een ontwerp van mij kritisch bekeek.</p></div>
+        </div>
+      </article>
+
+      <article class="chapter" id="inleiding">
+        <h2>Inleiding</h2>
+        <dl class="meta">
+          <div><dt>Map</dt><dd>02 / 09</dd></div>
+          <div><dt>Onderdeel</dt><dd>Introductie</dd></div>
+          <div><dt>Leestijd</dt><dd>3 min</dd></div>
+          <div><dt>Opbouw</dt><dd>4 banden, 9 mappen</dd></div>
+        </dl>
+        <figure class="photo"><figcaption><mark class="fill">Beeld: schermafbeelding van de beginpagina met de stapel mappen</mark></figcaption></figure>
+        <div class="text">
+          <p>Dit verslag heeft twee doelen. Het laat zien wat ik tijdens mijn stage bij Build in Amsterdam heb gedaan en geleerd, en het verantwoordt dat tegenover de opleiding: heb ik mijn leerdoelen gehaald, en kan ik dat onderbouwen? Daarom lees je hier niet alleen wat ik maakte, maar vooral hoe ik werkte en waarom ik de keuzes maakte die ik maakte.</p>
+          <h3>Doel van dit verslag</h3>
+          <p>Het verslag hoort bij <mark class="fill">studiejaar en naam van het onderwijsonderdeel, bijv. de stage in het derde jaar van CMD</mark>. Ik schreef het voor mijn stagedocent en de beoordelaars van de HvA, voor mijn begeleider bij Build in Amsterdam, en voor iedereen die wil weten hoe een CMD-student de weg vindt in een bureau voor digital commerce. De beoordelingscriteria staan in <mark class="fill">naam van de stagehandleiding of het beoordelingsformulier</mark> (Hogeschool van Amsterdam, <mark class="fill">jaar</mark>). In bijlage F staat per criterium waar het in dit dossier aan bod komt.</p>
+          <h3>Opbouw</h3>
+          <p>Het dossier bestaat uit vier banden met samen negen mappen:</p>
+          <ul>
+            <li><b>Introductie</b> – het voorwoord en deze inleiding.</li>
+            <li><b>Context</b> – het bureau en de leerdoelen waarmee ik begon.</li>
+            <li><b>Praktijk</b> – mijn werkzaamheden, de projecten waaraan ik meewerkte en mijn reflectie per leerdoel.</li>
+            <li><b>Afronding</b> – de conclusie, aanbevelingen voor het bureau en de opleiding, en de bijlagen en bronnen.</li>
+          </ul>
+          <h3>Leeswijzer: zo blader je door de mappen</h3>
+          <p>Op de beginpagina ligt het dossier als een stapel mappen. Elke gekleurde band is een onderdeel; de tabs die erboven uitsteken, zijn de mappen.</p>
+          <ol>
+            <li>Beweeg met je muis over een band. Hij kantelt iets naar achteren, zodat je ziet welke mappen erin zitten.</li>
+            <li>Klik op de naam van een band, rechts op de map, om hem uit te klappen en een korte omschrijving te lezen.</li>
+            <li>Klik op een tab om die map uit de stapel te trekken en te openen.</li>
+            <li>In een map staan de andere mappen uit dezelfde band als tabs langs de rechterrand. Zo spring je direct naar een verwant onderdeel.</li>
+            <li>Rechtsonder zie je steeds welke map hierna komt. Klik op ‘Volgende’, of blijf gewoon scrollen: aan het eind van een map begint de volgende vanzelf.</li>
+            <li>Via ‘Over’, rechtsboven, lees je wie ik ben en hoe dit dossier is gemaakt.</li>
+          </ol>
+          <p>Op een telefoon werkt het net zo, alleen tik je in plaats van te wijzen. Met het toetsenbord kan het ook: met Tab loop je langs de mappen en met Enter open je er een. Wil je het verslag gewoon van begin tot eind lezen? Open dan het voorwoord en blijf scrollen.</p>
+          <h3>Hoe dit verslag tot stand kwam</h3>
+          <p>Tijdens de stage hield ik <mark class="fill">vorm van het logboek, bijv. een wekelijks logboek in een gedeeld document</mark> bij. Die aantekeningen, de feedback van collega's en het werk dat ik opleverde, vormen de basis van dit dossier. Voor de reflectie gebruik ik de reflectiecyclus van Korthagen; in de map Reflectie leg ik uit waarom.</p>
+        </div>
+        <div class="notes">
+          <div class="note"><h3>Leeswijzer in het kort</h3><p>Band is onderdeel. Tab is map. Klik, lees en blijf scrollen.</p></div>
+          <div class="note"><h3>Voor de beoordelaar</h3><p>In bijlage F staat per beoordelingscriterium waar in dit dossier je het bewijs vindt.</p></div>
+          <div class="note"><h3>Van A naar Z</h3><p>Liever lineair lezen? Begin bij het voorwoord. Elke map loopt vanzelf over in de volgende.</p></div>
+        </div>
+      </article>
+
+      <article class="chapter" id="build-in-amsterdam">
+        <h2>Build in Amsterdam</h2>
+        <dl class="meta">
+          <div><dt>Map</dt><dd>03 / 09</dd></div>
+          <div><dt>Vestiging</dt><dd>Amsterdam</dd></div>
+          <div><dt>Vakgebied</dt><dd>Merk, ontwerp en ontwikkeling voor e-commerce</dd></div>
+          <div><dt>Opgericht</dt><dd><mark class="fill">jaartal</mark></dd></div>
+        </dl>
+        <figure class="photo"><figcaption><mark class="fill">Foto: het kantoor van Build in Amsterdam, met locatie</mark></figcaption></figure>
+        <figure class="photo"><figcaption><mark class="fill">Foto: het team tijdens een overleg, alleen met toestemming</mark></figcaption></figure>
+        <div class="text">
+          <p>Build in Amsterdam is een creatief bureau in Amsterdam dat zich richt op digital commerce: de plek waar een merk en een webwinkel samenkomen. Het bureau werkt aan merken, aan het ontwerp van online winkels en aan de technische bouw ervan. Doordat die vakgebieden onder één dak zitten, is het een plek waar ontwerp en techniek dicht op elkaar werken, en waar een stagiair van alle kanten tegelijk kan leren.</p>
+          <h3>Wat het bureau doet</h3>
+          <p>Het werk van Build in Amsterdam laat zich samenvatten in drie lijnen (Build in Amsterdam, z.d.):</p>
+          <ul>
+            <li><b>Merk</b> – <mark class="fill">korte omschrijving van het merkwerk, bijv. identiteit, campagnes en content</mark>.</li>
+            <li><b>E-commerce design</b> – het ontwerp van webwinkels en digitale ervaringen, van de beginpagina tot het afrekenen.</li>
+            <li><b>Ontwikkeling</b> – de technische bouw en doorontwikkeling van die winkels, op <mark class="fill">platform(en) waarmee het bureau werkt</mark>.</li>
+          </ul>
+          <p>Het bureau werkt vooral voor <mark class="fill">soort klanten, bijv. mode- en lifestylemerken</mark> in <mark class="fill">markten of landen</mark>. Het is opgericht in <mark class="fill">jaartal</mark> en telt ongeveer <mark class="fill">aantal medewerkers</mark>. Welke klanten dat precies zijn, noem ik in dit verslag alleen waar dat mag.</p>
+          <h3>Werkwijze</h3>
+          <p>Een project begint bij Build in Amsterdam meestal met <mark class="fill">hoe een project start, bijv. een briefing of een strategiefase</mark>. Daarna volgen <mark class="fill">de fases zoals het bureau ze noemt, bijv. concept, ontwerp, ontwikkeling, livegang en doorontwikkeling</mark>. Wat mij in de eerste weken opviel, is <mark class="fill">eerste indruk van de werkwijze, bijv. hoe vroeg ontwerpers en ontwikkelaars met elkaar in gesprek gaan</mark>.</p>
+          <p>Het werk wordt gepland in <mark class="fill">planningsvorm, bijv. sprints van twee weken</mark> en bijgehouden in <mark class="fill">naam van het projectbeheerprogramma</mark>. Ontwerpen worden intern besproken in <mark class="fill">vorm van de ontwerpbespreking</mark>, voordat ze naar de klant gaan.</p>
+          <h3>Cultuur</h3>
+          <p>Hoe een bureau werkt, zie je niet in een organogram maar aan de lunchtafel. <mark class="fill">beschrijving van de cultuur in eigen woorden: de sfeer, hoe er feedback wordt gegeven, vaste momenten zoals een gezamenlijke lunch of een vrijdagmiddagborrel</mark>. Als stagiair merkte ik dat vooral aan <mark class="fill">voorbeeld van hoe je als stagiair werd betrokken, bijv. of je mocht aansluiten bij klantgesprekken</mark>.</p>
+          <h3>Mijn plek in het bureau</h3>
+          <p>Ik maakte deel uit van <mark class="fill">naam van het team of de afdeling</mark>, een team van <mark class="fill">aantal</mark> mensen met <mark class="fill">vakgebieden in het team, bijv. ontwerpers, ontwikkelaars en een projectmanager</mark>. Mijn begeleider was <mark class="fill">naam en functie van de stagebegeleider</mark>. Ik werkte <mark class="fill">aantal</mark> dagen per week op kantoor in <mark class="fill">locatie van het kantoor</mark> en <mark class="fill">aantal</mark> dagen op afstand.</p>
+        </div>
+        <div class="notes">
+          <div class="note"><h3>Digital commerce</h3><p>Het vak waar merk, ontwerp en techniek samenkomen in één winkel. Een mooie productpagina die niet verkoopt, is in dit vak niet af.</p></div>
+          <div class="note"><h3>Onder één dak</h3><p>Merk, ontwerp en ontwikkeling zitten bij het bureau bij elkaar. Voor een stagiair betekent dat: van alle kanten tegelijk leren.</p></div>
+          <div class="note"><h3>In cijfers</h3><p>Opgericht in <mark class="fill">jaartal</mark>. Ongeveer <mark class="fill">aantal</mark> medewerkers. Kantoor in <mark class="fill">wijk of adres</mark>.</p></div>
+          <div class="note"><h3>Mijn team</h3><p><mark class="fill">naam van het team</mark>: <mark class="fill">aantal</mark> mensen, <mark class="fill">vakgebieden</mark>, en vanaf <mark class="fill">startdatum</mark> ook een stagiair.</p></div>
+        </div>
+      </article>
+
+      <article class="chapter" id="leerdoelen">
+        <h2>Leerdoelen</h2>
+        <dl class="meta">
+          <div><dt>Map</dt><dd>04 / 09</dd></div>
+          <div><dt>Aantal</dt><dd>4 leerdoelen</dd></div>
+          <div><dt>Kader</dt><dd>SMART, CMD-competenties</dd></div>
+          <div><dt>Vastgesteld</dt><dd><mark class="fill">datum waarop het stageplan is goedgekeurd</mark></dd></div>
+        </dl>
+        <figure class="photo"><figcaption><mark class="fill">Scan: pagina uit het goedgekeurde stageplan met de leerdoelen</mark></figcaption></figure>
+        <div class="text">
+          <p>Voordat de stage begon, legde ik in mijn stageplan vast wat ik wilde leren. Geen losse wensen, maar doelen die ik aan het eind kon toetsen. Ik formuleerde ze volgens de SMART-methode, die teruggaat op Doran (1981), in de gangbare Nederlandse invulling: specifiek, meetbaar, acceptabel, realistisch en tijdgebonden. Elk doel koppelde ik aan een competentie uit het opleidingsprofiel van CMD, zodat duidelijk is wat de stage bijdraagt aan mijn ontwikkeling als ontwerper.</p>
+          <h3>Hoe ik tot deze doelen kwam</h3>
+          <p>De doelen komen uit drie richtingen: de feedback die ik in eerdere projecten op de opleiding kreeg, mijn eigen beeld van wat ik nog miste, en het gesprek met <mark class="fill">naam van de stagebegeleider</mark> in de eerste week over wat het bureau van een stagiair verwacht. <mark class="fill">eventuele bijstelling van de doelen halverwege de stage, met de reden, of: de doelen zijn tijdens de stage niet bijgesteld</mark>.</p>
+          <h3>Leerdoel 1 · Ontwerpen binnen een bestaand merk</h3>
+          <p>Aan het eind van mijn stage ontwerp ik zelfstandig <mark class="fill">concreet ontwerpresultaat, bijv. een complete productpagina</mark> binnen het bestaande merk en designsysteem van een klant. Het ontwerp wordt na hooguit <mark class="fill">aantal</mark> feedbackrondes goedgekeurd door <mark class="fill">rol die goedkeurt, bijv. de art director</mark>.</p>
+          <ul>
+            <li><b>Competentie</b> – <mark class="fill">CMD-competentie, bijv. Ontwerpen</mark></li>
+            <li><b>Zo meet ik het</b> – het aantal feedbackrondes per ontwerp en het oordeel van mijn begeleider.</li>
+          </ul>
+          <h3>Leerdoel 2 · Overdracht naar ontwikkeling</h3>
+          <p>Vanaf week <mark class="fill">weeknummer</mark> lever ik elk ontwerp op met <mark class="fill">vorm van de overdracht, bijv. geannoteerde schermen en een beschrijving per component</mark>, en vraag ik na elke overdracht een ontwikkelaar om feedback. Aan het eind van de stage stellen ontwikkelaars gemiddeld <mark class="fill">aantal</mark> of minder inhoudelijke vragen per overdracht.</p>
+          <ul>
+            <li><b>Competentie</b> – <mark class="fill">CMD-competentie, bijv. Samenwerken</mark></li>
+            <li><b>Zo meet ik het</b> – de vragen per overdracht, bijgehouden in mijn logboek, en de feedback van ontwikkelaars.</li>
+          </ul>
+          <h3>Leerdoel 3 · Keuzes onderbouwen met onderzoek</h3>
+          <p>Bij minstens <mark class="fill">aantal</mark> ontwerpbeslissingen tijdens de stage onderbouw ik mijn keuze met onderzoek, zoals <mark class="fill">vorm van onderzoek, bijv. een gebruikerstest, een data-analyse of een concurrentieanalyse</mark>. De uitkomst leg ik vast in <mark class="fill">plek, bijv. een kort onderzoeksverslag per project</mark>.</p>
+          <ul>
+            <li><b>Competentie</b> – <mark class="fill">CMD-competentie, bijv. Onderzoeken</mark></li>
+            <li><b>Zo meet ik het</b> – het aantal vastgelegde onderzoeken en de ontwerpkeuzes die daarop zijn gebaseerd.</li>
+          </ul>
+          <h3>Leerdoel 4 · Werk presenteren en verdedigen</h3>
+          <p>Voor het einde van de stage presenteer ik mijn werk minstens <mark class="fill">aantal</mark> keer zelfstandig aan het team of aan een klant. Na elke presentatie vraag ik feedback op <mark class="fill">criteria, bijv. helderheid en onderbouwing</mark>, en die feedback laat per keer vooruitgang zien.</p>
+          <ul>
+            <li><b>Competentie</b> – <mark class="fill">CMD-competentie, bijv. Presenteren of Professionaliseren</mark></li>
+            <li><b>Zo meet ik het</b> – de feedback per presentatie, naast elkaar gelegd.</li>
+          </ul>
+          <p>Of ik deze doelen heb gehaald, en wat ik onderweg tegenkwam, lees je in de map Reflectie.</p>
+        </div>
+        <div class="notes">
+          <div class="note"><h3>SMART</h3><p>Specifiek, meetbaar, acceptabel, realistisch en tijdgebonden. Een doel dat je niet kunt toetsen, is een wens.</p></div>
+          <div class="note"><h3>Vier doelen</h3><p>Ontwerpen binnen een merk, overdragen aan ontwikkeling, onderbouwen met onderzoek en presenteren. Elk doel komt terug in de reflectie.</p></div>
+          <div class="note"><h3>Bijgesteld?</h3><p><mark class="fill">welk doel halverwege is aangepast en waarom, of: geen van de doelen is bijgesteld</mark>.</p></div>
+        </div>
+      </article>
+
+      <article class="chapter" id="werkzaamheden">
+        <h2>Werkzaamheden</h2>
+        <dl class="meta">
+          <div><dt>Map</dt><dd>05 / 09</dd></div>
+          <div><dt>Rol</dt><dd><mark class="fill">functie tijdens de stage</mark></dd></div>
+          <div><dt>Uren per week</dt><dd><mark class="fill">aantal</mark></dd></div>
+          <div><dt>Periode</dt><dd><mark class="fill">begin- en einddatum</mark></dd></div>
+        </dl>
+        <figure class="photo"><figcaption><mark class="fill">Foto: mijn werkplek, met datum</mark></figcaption></figure>
+        <figure class="photo"><figcaption><mark class="fill">Schermafbeelding: een weekplanning of het takenbord, zonder klantgegevens</mark></figcaption></figure>
+        <div class="text">
+          <p>Een stage bestaat voor het grootste deel uit gewone dagen. In deze map beschrijf ik hoe zo'n week eruitzag: wanneer het team samenkwam, waar ik aan werkte en met welk gereedschap. Het is de achtergrond waartegen de projecten in de volgende map zich afspeelden.</p>
+          <h3>Mijn rol</h3>
+          <p>Als <mark class="fill">functie</mark> binnen <mark class="fill">naam van het team</mark> hield ik me vooral bezig met <mark class="fill">hoofdtaken, bijv. het ontwerpen van pagina's en componenten, prototypes en visuele uitwerking</mark>. In de eerste weken <mark class="fill">hoe de inwerkperiode verliep, bijv. meelopen met een ontwerper en kleine taken oppakken</mark>. Vanaf <mark class="fill">moment, bijv. week vier</mark> kreeg ik eigen onderdelen van projecten onder mijn hoede.</p>
+          <h3>Een gewone werkweek</h3>
+          <p>Geen week was hetzelfde, maar het ritme wel. Zo zag een gemiddelde week er ongeveer uit:</p>
+          <ul>
+            <li><b>Maandag</b> – <mark class="fill">vast moment aan het begin van de week, bijv. een weekstart met de planning</mark>. Daarna zet ik mijn eigen taken voor de week op een rij.</li>
+            <li><b>Dinsdag</b> – <mark class="fill">typische bezigheden, bijv. ontwerpwerk aan het lopende project</mark>.</li>
+            <li><b>Woensdag</b> – <mark class="fill">bijv. een ontwerpbespreking met het team of de art director</mark>.</li>
+            <li><b>Donderdag</b> – <mark class="fill">bijv. afstemming met ontwikkelaars en overdracht van ontwerpen</mark>.</li>
+            <li><b>Vrijdag</b> – <mark class="fill">bijv. werk afronden, het logboek bijwerken en de week gezamenlijk afsluiten</mark>.</li>
+          </ul>
+          <h3>Vaste momenten</h3>
+          <p>Naast dat weekritme kende het bureau een aantal vaste gewoonten:</p>
+          <ul>
+            <li><mark class="fill">dagelijks overleg, bijv. een korte stand-up aan het begin van de dag</mark></li>
+            <li><mark class="fill">terugkerend ontwerpoverleg waarin werk samen wordt besproken</mark></li>
+            <li><mark class="fill">iets voor de sfeer, bijv. een gezamenlijke lunch, borrel of teamuitje</mark></li>
+            <li>Mijn eigen vaste moment: <mark class="fill">frequentie, bijv. elke twee weken</mark> een gesprek met <mark class="fill">naam van de begeleider</mark> over mijn voortgang en leerdoelen.</li>
+          </ul>
+          <h3>Gereedschap</h3>
+          <p>Dit is het gereedschap waarmee ik dagelijks werkte:</p>
+          <ul>
+            <li><b>Ontwerpen en prototypen</b> – <mark class="fill">programma, bijv. Figma</mark></li>
+            <li><b>Overleg en planning</b> – <mark class="fill">programma's, bijv. Slack en Jira</mark></li>
+            <li><b>Ontwikkeling en e-commerce</b> – <mark class="fill">platform waarop de winkels draaien</mark></li>
+            <li><b>Onderzoek en data</b> – <mark class="fill">bijv. een analyseprogramma of testplatform</mark></li>
+          </ul>
+          <p>Nieuw voor mij was <mark class="fill">programma of werkwijze die je nog niet kende, en hoe je je dat eigen maakte</mark>. Het belangrijkste gereedschap bleek uiteindelijk geen programma, maar <mark class="fill">wat het wel was, bijv. meekijken over de schouder van een collega</mark>.</p>
+          <h3>Uren en verdeling</h3>
+          <p>Mijn tijd verdeelde zich grofweg zo: <mark class="fill">verdeling, bijv. 60% ontwerpen, 20% overleg en 20% onderzoek en leren</mark>. De volledige urenverantwoording staat in bijlage C.</p>
+        </div>
+        <div class="notes">
+          <div class="note"><h3>Weekritme</h3><p>Maandag plannen, vrijdag afronden. Daartussen: ontwerpen, bespreken, overdragen en weer bijstellen.</p></div>
+          <div class="note"><h3>Eerste week</h3><p><mark class="fill">korte anekdote over de eerste week, bijv. je eerste taak</mark>.</p></div>
+          <div class="note"><h3>Gereedschapskist</h3><p><mark class="fill">de drie programma's die je het meest gebruikte</mark>. En een collega die tijd had om mee te kijken.</p></div>
+        </div>
+      </article>
+
+      <article class="chapter" id="projecten">
+        <h2>Projecten</h2>
+        <dl class="meta">
+          <div><dt>Map</dt><dd>06 / 09</dd></div>
+          <div><dt>Aantal</dt><dd>3 projecten</dd></div>
+          <div><dt>Rol</dt><dd><mark class="fill">rol in de projecten</mark></dd></div>
+          <div><dt>Vertrouwelijk</dt><dd>klantnamen alleen met toestemming</dd></div>
+        </dl>
+        <figure class="photo"><figcaption><mark class="fill">Beeld: ontwerp uit project 01, alleen met toestemming van de klant</mark></figcaption></figure>
+        <figure class="photo"><figcaption><mark class="fill">Beeld: schets of wireframe uit project 03</mark></figcaption></figure>
+        <div class="text">
+          <p>Drie projecten vormen de kern van mijn stage. Ze verschillen in omvang en in mijn rol, maar samen laten ze zien hoe ik aan mijn leerdoelen heb gewerkt. Per project beschrijf ik de opdracht, mijn rol, mijn aanpak en wat het opleverde. Waar ik een klant niet mag noemen, beschrijf ik het soort opdracht.</p>
+          <h3>Project 01 · <mark class="fill">naam van het project of de klant</mark></h3>
+          <ul>
+            <li><b>Opdracht</b> – <mark class="fill">soort project, bijv. een nieuw ontwerp voor de productpagina van een modemerk</mark></li>
+            <li><b>Rol</b> – <mark class="fill">jouw rol in dit project</mark></li>
+            <li><b>Periode</b> – <mark class="fill">weken of maanden</mark></li>
+            <li><b>Leerdoelen</b> – 1 en 3</li>
+          </ul>
+          <p>De vraag van de klant was <mark class="fill">korte omschrijving van de vraag</mark>. Ik begon met het in kaart brengen van wat er al lag: het bestaande merk, het designsysteem en <mark class="fill">beschikbare data of eerder onderzoek</mark>. Daarna maakte ik <mark class="fill">eerste ontwerpstappen, bijv. schetsen en wireframes</mark>, die ik besprak met <mark class="fill">rol, bijv. de art director</mark>. Na <mark class="fill">aantal</mark> rondes werkte ik het ontwerp visueel uit tot <mark class="fill">eindvorm, bijv. een klikbaar prototype</mark>.</p>
+          <p>Het resultaat: <mark class="fill">wat het project opleverde, bijv. een goedgekeurd ontwerp dat live ging, of een meetbaar resultaat als dat gedeeld mag worden</mark>. Wat ik eruit meeneem: <mark class="fill">de belangrijkste les in één zin</mark>.</p>
+          <h3>Project 02 · <mark class="fill">naam van het project of de klant</mark></h3>
+          <ul>
+            <li><b>Opdracht</b> – <mark class="fill">soort project, bijv. de bouw van een nieuwe webwinkel</mark></li>
+            <li><b>Rol</b> – <mark class="fill">jouw rol in dit project</mark></li>
+            <li><b>Periode</b> – <mark class="fill">weken of maanden</mark></li>
+            <li><b>Leerdoelen</b> – 2</li>
+          </ul>
+          <p>Bij dit project lag de nadruk op de overgang van ontwerp naar ontwikkeling. Ik <mark class="fill">wat je deed, bijv. werkte een set componenten uit en beschreef per component hoe het zich gedraagt</mark>. Samen met <mark class="fill">naam of rol van de ontwikkelaar</mark> liep ik de ontwerpen door voordat het bouwen begon. Tijdens de bouw <mark class="fill">vorm van afstemming, bijv. een wekelijkse controle van de gebouwde pagina's naast het ontwerp</mark>.</p>
+          <p>Het resultaat: <mark class="fill">wat het project opleverde</mark>. Wat ik eruit meeneem: <mark class="fill">de belangrijkste les in één zin</mark>.</p>
+          <h3>Project 03 · <mark class="fill">naam van het project of de klant</mark></h3>
+          <ul>
+            <li><b>Opdracht</b> – <mark class="fill">soort project, bijv. onderzoek naar een onderdeel van een bestaande winkel</mark></li>
+            <li><b>Rol</b> – <mark class="fill">jouw rol in dit project</mark></li>
+            <li><b>Periode</b> – <mark class="fill">weken of maanden</mark></li>
+            <li><b>Leerdoelen</b> – 3 en 4</li>
+          </ul>
+          <p>Het derde project draaide vooral om onderzoek en om het presenteren van de uitkomsten. De vraag was <mark class="fill">omschrijving van de onderzoeksvraag</mark>. Ik koos voor <mark class="fill">onderzoeksmethode</mark>, omdat <mark class="fill">reden voor die methode</mark>. De uitkomsten presenteerde ik aan <mark class="fill">publiek, bijv. het team of de klant</mark>.</p>
+          <p>Het resultaat: <mark class="fill">wat het project opleverde, bijv. een aanbeveling die is overgenomen</mark>. Wat ik eruit meeneem: <mark class="fill">de belangrijkste les in één zin</mark>.</p>
+          <h3>Kleiner werk</h3>
+          <p>Naast deze projecten werkte ik mee aan <mark class="fill">kleinere klussen, bijv. banners, nieuwsbrieven of aanpassingen aan bestaande pagina's</mark>. Het is minder zichtbaar werk, maar het leerde me <mark class="fill">wat het je leerde, bijv. hoe precies een merk tot in het kleinste detail wordt toegepast</mark>.</p>
+        </div>
+        <div class="notes">
+          <div class="note"><h3>Project 01</h3><p><mark class="fill">naam</mark>. <mark class="fill">één zin over het resultaat</mark>.</p></div>
+          <div class="note"><h3>Project 02</h3><p><mark class="fill">naam</mark>. <mark class="fill">één zin over het resultaat</mark>.</p></div>
+          <div class="note"><h3>Project 03</h3><p><mark class="fill">naam</mark>. <mark class="fill">één zin over het resultaat</mark>.</p></div>
+          <div class="note"><h3>Niet in beeld</h3><p>Een deel van het werk is vertrouwelijk. Waar een beeld ontbreekt, beschrijf ik de aanpak in woorden.</p></div>
+        </div>
+      </article>
+
+      <article class="chapter" id="reflectie">
+        <h2>Reflectie</h2>
+        <dl class="meta">
+          <div><dt>Map</dt><dd>07 / 09</dd></div>
+          <div><dt>Model</dt><dd>Reflectiecyclus van Korthagen</dd></div>
+          <div><dt>Leerdoelen</dt><dd>4</dd></div>
+          <div><dt>Leestijd</dt><dd>4 min</dd></div>
+        </dl>
+        <figure class="photo"><figcaption><mark class="fill">Beeld: pagina uit het logboek of een ingevuld feedbackformulier</mark></figcaption></figure>
+        <div class="text">
+          <p>Terugkijken is iets anders dan navertellen. In deze map kijk ik per leerdoel naar wat ik deed, wat daarbij goed ging, wat lastig was en wat ik ervan heb geleerd. Ik gebruik daarvoor de reflectiecyclus van Korthagen, omdat die me dwingt om niet bij een oordeel te blijven hangen, maar door te denken naar wat ik de volgende keer anders doe.</p>
+          <h3>Het model</h3>
+          <p>De reflectiecyclus van Korthagen, ook wel het ALACT-model genoemd, bestaat uit vijf fasen (Korthagen et al., 2001):</p>
+          <ol>
+            <li><b>Handelen</b> – wat deed ik in een concrete situatie?</li>
+            <li><b>Terugblikken</b> – wat gebeurde er, wat wilde ik, wat dacht en voelde ik?</li>
+            <li><b>Bewustwording</b> – wat is hier de kern?</li>
+            <li><b>Alternatieven bedenken</b> – welke andere aanpak is mogelijk?</li>
+            <li><b>Uitproberen</b> – wat pas ik de volgende keer toe? Daarmee begint de cyclus opnieuw.</li>
+          </ol>
+          <p>Per leerdoel beschrijf ik een situatie die typerend was en loop ik de cyclus door aan de hand van vier vragen: wat ging goed, wat was lastig, wat heb ik geleerd en wat doe ik voortaan anders.</p>
+          <h3>Leerdoel 1 · Ontwerpen binnen een bestaand merk</h3>
+          <ul>
+            <li><b>Situatie</b> – <mark class="fill">typerende situatie, bijv. het eerste ontwerp dat ik voor project 01 maakte</mark>.</li>
+            <li><b>Wat ging goed</b> – <mark class="fill">wat werkte, bijv. ik kon de visuele taal van het merk snel overnemen</mark>. Dat kwam vooral doordat <mark class="fill">oorzaak, bijv. ik eerst het designsysteem grondig doornam</mark>.</li>
+            <li><b>Wat was lastig</b> – <mark class="fill">wat schuurde, bijv. eigen ideeën loslaten als ze niet binnen het merk pasten</mark>. Achteraf zie ik dat ik <mark class="fill">wat je op dat moment dacht of voelde</mark>.</li>
+            <li><b>Wat heb ik geleerd</b> – De kern was voor mij dat <mark class="fill">inzicht, bijv. kaders een ontwerp niet kleiner maken maar scherper</mark>.</li>
+            <li><b>Wat doe ik voortaan anders</b> – <mark class="fill">concreet alternatief</mark>. Ik probeerde dat uit bij <mark class="fill">latere situatie</mark>, met als resultaat <mark class="fill">wat dat opleverde</mark>.</li>
+            <li><b>Stand</b> – <mark class="fill">behaald, deels behaald of niet behaald</mark></li>
+          </ul>
+          <h3>Leerdoel 2 · Overdracht naar ontwikkeling</h3>
+          <ul>
+            <li><b>Situatie</b> – <mark class="fill">typerende situatie, bijv. de eerste overdracht in project 02</mark>.</li>
+            <li><b>Wat ging goed</b> – <mark class="fill">wat werkte, bijv. ontwikkelaars konden met mijn aantekeningen direct aan de slag</mark>.</li>
+            <li><b>Wat was lastig</b> – <mark class="fill">wat schuurde, bijv. ik ontwierp interacties zonder te weten wat technisch haalbaar was</mark>.</li>
+            <li><b>Wat heb ik geleerd</b> – <mark class="fill">inzicht, bijv. een ontwerp is pas af als duidelijk is hoe het gebouwd wordt</mark>.</li>
+            <li><b>Wat doe ik voortaan anders</b> – <mark class="fill">concreet alternatief, bijv. een ontwikkelaar al in de schetsfase laten meekijken</mark>. Het effect: <mark class="fill">wat er veranderde</mark>.</li>
+            <li><b>Stand</b> – <mark class="fill">behaald, deels behaald of niet behaald</mark></li>
+          </ul>
+          <h3>Leerdoel 3 · Keuzes onderbouwen met onderzoek</h3>
+          <ul>
+            <li><b>Situatie</b> – <mark class="fill">typerende situatie, bijv. een discussie over een ontwerpkeuze in project 03</mark>.</li>
+            <li><b>Wat ging goed</b> – <mark class="fill">wat werkte, bijv. een kleine test gaf een duidelijk antwoord</mark>.</li>
+            <li><b>Wat was lastig</b> – <mark class="fill">wat schuurde, bijv. onderzoek inpassen in de planning van een klantproject</mark>.</li>
+            <li><b>Wat heb ik geleerd</b> – <mark class="fill">inzicht, bijv. klein en snel onderzoek is beter dan geen onderzoek</mark>.</li>
+            <li><b>Wat doe ik voortaan anders</b> – <mark class="fill">concreet alternatief, bijv. bij de start van een project al bepalen welke vraag ik wil toetsen</mark>.</li>
+            <li><b>Stand</b> – <mark class="fill">behaald, deels behaald of niet behaald</mark></li>
+          </ul>
+          <h3>Leerdoel 4 · Werk presenteren en verdedigen</h3>
+          <ul>
+            <li><b>Situatie</b> – <mark class="fill">typerende situatie, bijv. mijn eerste presentatie aan de klant</mark>.</li>
+            <li><b>Wat ging goed</b> – <mark class="fill">wat werkte</mark>.</li>
+            <li><b>Wat was lastig</b> – <mark class="fill">wat schuurde, bijv. een onverwachte vraag waarop ik geen antwoord had</mark>.</li>
+            <li><b>Wat heb ik geleerd</b> – <mark class="fill">inzicht, bijv. een ontwerp verdedig je met de vraag van de klant, niet met je eigen smaak</mark>.</li>
+            <li><b>Wat doe ik voortaan anders</b> – <mark class="fill">concreet alternatief, bijv. vooraf de drie lastigste vragen bedenken en beantwoorden</mark>.</li>
+            <li><b>Stand</b> – <mark class="fill">behaald, deels behaald of niet behaald</mark></li>
+          </ul>
+          <h3>Wat ik meeneem</h3>
+          <p>Het ui-model van Korthagen en Vasalos (2005) hielp me om nog een laag dieper te kijken. Reflectie wordt pas echt nuttig als je voorbij je gedrag kijkt, naar je overtuigingen en naar wat voor ontwerper je wilt zijn. Voor mij kwam het daarop neer dat <mark class="fill">je grootste inzicht over jezelf als ontwerper, in twee of drie zinnen</mark>.</p>
+        </div>
+        <div class="notes">
+          <div class="note"><h3>Korthagen in vijf stappen</h3><p>Handelen, terugblikken, de kern zien, alternatieven bedenken, uitproberen. En dan opnieuw.</p></div>
+          <div class="note"><h3>Grootste les</h3><p><mark class="fill">je belangrijkste inzicht uit de stage in één of twee zinnen</mark>.</p></div>
+          <div class="note"><h3>Wat schuurde</h3><p><mark class="fill">het moment waarop het het minst goed ging, en wat het je opleverde</mark>.</p></div>
+          <div class="note"><h3>Stand van zaken</h3><p>Leerdoel 1: <mark class="fill">stand</mark>. Leerdoel 2: <mark class="fill">stand</mark>. Leerdoel 3: <mark class="fill">stand</mark>. Leerdoel 4: <mark class="fill">stand</mark>.</p></div>
+        </div>
+      </article>
+
+      <article class="chapter" id="conclusie">
+        <h2>Conclusie &amp; aanbevelingen</h2>
+        <dl class="meta">
+          <div><dt>Map</dt><dd>08 / 09</dd></div>
+          <div><dt>Onderdeel</dt><dd>Afronding</dd></div>
+          <div><dt>Leerdoelen behaald</dt><dd><mark class="fill">aantal</mark> van 4</dd></div>
+          <div><dt>Leestijd</dt><dd>3 min</dd></div>
+        </dl>
+        <figure class="photo"><figcaption><mark class="fill">Foto: de eindpresentatie of de laatste werkdag, met datum</mark></figcaption></figure>
+        <div class="text">
+          <p>Aan het begin van dit dossier stond een vraag: wat heb ik bij Build in Amsterdam gedaan en geleerd, en heb ik mijn leerdoelen gehaald? In deze map geef ik het antwoord. Daarna kijk ik vooruit, met aanbevelingen voor het bureau, voor de opleiding en voor mezelf.</p>
+          <h3>Conclusie</h3>
+          <p>Terugkijkend heb ik <mark class="fill">aantal</mark> van mijn vier leerdoelen volledig gehaald en <mark class="fill">aantal</mark> gedeeltelijk:</p>
+          <ul>
+            <li><b>Ontwerpen binnen een bestaand merk</b> – <mark class="fill">stand, met het belangrijkste bewijs</mark></li>
+            <li><b>Overdracht naar ontwikkeling</b> – <mark class="fill">stand, met het belangrijkste bewijs</mark></li>
+            <li><b>Keuzes onderbouwen met onderzoek</b> – <mark class="fill">stand, met het belangrijkste bewijs</mark></li>
+            <li><b>Werk presenteren en verdedigen</b> – <mark class="fill">stand, met het belangrijkste bewijs</mark></li>
+          </ul>
+          <p>Belangrijker dan die score vind ik wat erachter zit. <mark class="fill">twee of drie zinnen over hoe je als ontwerper bent veranderd, bijv. hoe je nu anders naar een briefing kijkt</mark>. De stage heeft me laten zien dat <mark class="fill">kerninzicht over het vak</mark>.</p>
+          <h3>Aanbevelingen voor Build in Amsterdam</h3>
+          <p>Een stagiair kijkt met frisse ogen naar een bureau. Op basis van mijn ervaring doe ik Build in Amsterdam de volgende aanbevelingen:</p>
+          <ol>
+            <li><b>Een inwerkmap voor stagiairs</b> – Leg de belangrijkste werkafspraken, programma's en aanspreekpunten vast op één plek, zodat een nieuwe stagiair in de eerste week sneller zelfstandig kan werken. Aanleiding: <mark class="fill">wat je zelf meemaakte in de eerste weken</mark>.</li>
+            <li><b>Een vast gesprek over ontwikkeling</b> – Plan naast de dagelijkse feedback op het werk een terugkerend gesprek over de groei van de stagiair zelf. Aanleiding: <mark class="fill">wat je zelf meemaakte</mark>.</li>
+            <li><mark class="fill">derde aanbeveling over de werkwijze of het proces, met aanleiding</mark></li>
+          </ol>
+          <h3>Aanbevelingen voor de opleiding</h3>
+          <ol>
+            <li><b>Meer ontwerpen binnen kaders</b> – Op de opleiding begin je vaak bij een leeg vel; in de praktijk werk je meestal verder op een bestaand merk en designsysteem. Een opdracht waarin je binnen strakke kaders moet ontwerpen, bereidt beter voor op het werk in een bureau.</li>
+            <li><b>Oefen de overdracht naar ontwikkeling</b> – Samenwerken met ontwikkelaars is in een bureau dagelijks werk. Laat CMD-studenten vaker samen optrekken met studenten van <mark class="fill">naam van een technische opleiding binnen de HvA</mark>.</li>
+            <li><b>E-commerce als ontwerpveld</b> – Webwinkels horen bij de meest gebruikte digitale producten. <mark class="fill">eigen onderbouwing: hoeveel aandacht e-commerce in jouw opleiding kreeg en wat je tijdens de stage miste aan voorkennis</mark>.</li>
+          </ol>
+          <h3>En voor mezelf</h3>
+          <p>De stage is afgelopen, maar het leren niet. <mark class="fill">wat je na de stage verder wilt ontwikkelen, bijv. een vervolgleerdoel voor je afstudeerstage</mark>. Dat neem ik mee naar <mark class="fill">volgende stap, bijv. het afstudeerjaar</mark>.</p>
+        </div>
+        <div class="notes">
+          <div class="note"><h3>In één zin</h3><p><mark class="fill">de conclusie van je stage in één zin</mark>.</p></div>
+          <div class="note"><h3>Voor het bureau</h3><p>Een inwerkmap, een vast gesprek over ontwikkeling en <mark class="fill">derde aanbeveling in een paar woorden</mark>.</p></div>
+          <div class="note"><h3>Voor de opleiding</h3><p>Meer ontwerpen binnen kaders, meer samenwerken met ontwikkelaars en e-commerce als serieus ontwerpveld.</p></div>
+        </div>
+      </article>
+
+      <article class="chapter" id="bijlagen">
+        <h2>Bijlagen &amp; bronnen</h2>
+        <dl class="meta">
+          <div><dt>Map</dt><dd>09 / 09</dd></div>
+          <div><dt>Bijlagen</dt><dd>6 (A tot en met F)</dd></div>
+          <div><dt>Bronstijl</dt><dd>APA 7</dd></div>
+          <div><dt>Leestijd</dt><dd>2 min</dd></div>
+        </dl>
+        <figure class="photo"><figcaption><mark class="fill">Scan: eerste pagina van het ingevulde beoordelingsformulier</mark></figcaption></figure>
+        <div class="text">
+          <p>Deze laatste map is het archief achter het verslag. Hier staan de documenten die mijn verhaal onderbouwen en de bronnen waarnaar ik in de tekst verwijs. De bijlagen zijn apart ingeleverd: <mark class="fill">waar en hoe, bijv. als pdf in de inleveromgeving van de HvA</mark>.</p>
+          <h3>Bijlagen</h3>
+          <ul>
+            <li><b>Bijlage A</b> – Stageplan met leerdoelen, goedgekeurd op <mark class="fill">datum</mark></li>
+            <li><b>Bijlage B</b> – Beoordelingsformulier van de stagebegeleider, <mark class="fill">naam van de begeleider</mark></li>
+            <li><b>Bijlage C</b> – Urenverantwoording en logboek, <mark class="fill">periode</mark></li>
+            <li><b>Bijlage D</b> – Overzicht van opgeleverd werk: <mark class="fill">aantal</mark> ontwerpen, alleen met toestemming van de klant</li>
+            <li><b>Bijlage E</b> – Feedback van collega's en ontwikkelaars, <mark class="fill">vorm, bijv. verzamelde feedbackformulieren</mark></li>
+            <li><b>Bijlage F</b> – Verantwoording per beoordelingscriterium: waar in dit dossier elk criterium aan bod komt</li>
+          </ul>
+          <h3>Bronnen</h3>
+          <p>Bronnen volgens APA 7 (American Psychological Association, 2020), op alfabetische volgorde. In de tekst verwijs ik met auteur en jaar, bijvoorbeeld (Doran, 1981).</p>
+          <ul class="sources">
+            <li>American Psychological Association. (2020). <i>Publication manual of the American Psychological Association</i> (7th ed.). https://doi.org/10.1037/0000165-000</li>
+            <li>Build in Amsterdam. (z.d.). <mark class="fill">titel van de geraadpleegde pagina</mark>. Geraadpleegd op <mark class="fill">datum</mark>, van https://www.buildinamsterdam.com</li>
+            <li>Doran, G. T. (1981). There's a S.M.A.R.T. way to write management's goals and objectives. <i>Management Review, 70</i>(11), 35–36.</li>
+            <li>Hogeschool van Amsterdam. (<mark class="fill">jaar</mark>). <i><mark class="fill">titel van de stagehandleiding CMD</mark></i>. <mark class="fill">vindplaats of URL</mark></li>
+            <li>Korthagen, F. A. J., Kessels, J., Koster, B., Lagerwerf, B., &amp; Wubbels, T. (2001). <i>Linking practice and theory: The pedagogy of realistic teacher education</i>. Lawrence Erlbaum Associates.</li>
+            <li>Korthagen, F. A. J., &amp; Vasalos, A. (2005). Levels in reflection: Core reflection as a means to enhance professional growth. <i>Teachers and Teaching: Theory and Practice, 11</i>(1), 47–71. https://doi.org/10.1080/1354060042000337093</li>
+            <li><mark class="fill">overige bronnen die je in de tekst gebruikt, in APA 7</mark></li>
+          </ul>
+        </div>
+        <div class="notes">
+          <div class="note"><h3>Ingeleverd</h3><p>Alle bijlagen zijn op <mark class="fill">datum</mark> ingeleverd via <mark class="fill">inleveromgeving</mark>.</p></div>
+          <div class="note"><h3>Bronstijl</h3><p>APA 7. In de tekst staan auteur en jaar, achterin de volledige bron.</p></div>
+          <div class="note"><h3>Einde dossier</h3><p>Dit is de laatste map. Via het overzicht open je elke map opnieuw.</p></div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <aside class="next-widget" hidden></aside>
+</body>
+</html>
